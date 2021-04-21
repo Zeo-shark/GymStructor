@@ -51,7 +51,7 @@ class _MainPageState extends State<MainPage> {
               fit: BoxFit.cover,
             ),
             Text(
-              "Gym Training and Exercises",
+              "Gym Training and Warm Up Exercises",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -171,7 +171,7 @@ class _MainPageState extends State<MainPage> {
           children: [
             Ink.image(
               image: NetworkImage(
-                'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
+                'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdWx0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
               ),
               colorFilter: ColorFilters.greyscale,
               child: InkWell(
@@ -181,7 +181,7 @@ class _MainPageState extends State<MainPage> {
               fit: BoxFit.cover,
             ),
             Text(
-              "Reminder",
+              " Daily Reports",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
