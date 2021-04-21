@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gym_app/Screens/video_player/exercise_screen.dart';
 import 'package:gym_app/Screens/video_player/yoga_screen.dart';
 
 import 'excersises_screen.dart';
@@ -15,7 +16,7 @@ class _VideoScreen extends State<VideoScreen> {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Video Section"),
+        title: Text("Video Training Section"),
       ),
       body: Container(
         color: Colors.cyanAccent,
@@ -24,7 +25,7 @@ class _VideoScreen extends State<VideoScreen> {
           padding: EdgeInsets.all(30),
           children: [
             ListTile(
-              title: Text("exercises Videos"),
+              title: Text("Gym Training"),
               subtitle: Text("A collection of  videos for doing exercises at home "),
               leading: Icon(Icons.play_arrow),
               tileColor: Colors.lightBlueAccent,

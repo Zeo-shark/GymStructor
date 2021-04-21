@@ -1,61 +1,194 @@
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:gym_app/constants/constants.dart';
-import 'package:gym_app/screens/home/components/courses.dart';
-import 'package:gym_app/screens/home/components/custom_app_bar.dart';
-import 'package:gym_app/screens/home/components/diff_styles.dart';
+import 'package:gym_app/Screens/video_player/yoga_screen.dart';
+import './components/color_filters.dart';
+import '../video_player/VideoScreen.dart';
 
 
-
-class HomeScreen extends StatefulWidget {
+class MainPage extends StatefulWidget {
+  
   @override
-  _HomeScreenState createState() => _HomeScreenState();
+  _MainPageState createState() => _MainPageState();
 }
 
-class _HomeScreenState extends State<HomeScreen> {
-
-  int selsctedIconIndex = 2;
-
+class _MainPageState extends State<MainPage> {
   @override
-  Widget build(BuildContext context) {
-
-    return Scaffold(
-      backgroundColor: Colors.white,
-      extendBody: true,
-      body: Padding(
-         padding: EdgeInsets.only(top:appPadding * 2),
-
-         child: Column(
-           children: [
-             CustomAppBar(),
-             DiffStyles(),
-             Courses(),
-           ],
-         ),
-       ),
-      bottomNavigationBar: CurvedNavigationBar(
-        backgroundColor: Colors.transparent,
-        index: selsctedIconIndex,
-        buttonBackgroundColor: primary,
-        height: 60.0,
-        color: white,
-        onTap: (index) {
-          setState(() {
-            selsctedIconIndex = index;
-          });
-        },
-        animationDuration: Duration(
-          milliseconds: 200,
+  Widget build(BuildContext context) => Scaffold(
+        
+        body: ListView(
+          padding: EdgeInsets.all(16),
+          children: [
+            buildTrainingImageCard(),
+            buildChallengesImageCard(),
+            buildCalculatorImageCard(),
+            buildHealthyDietImageCard(),
+            buildReminderImageCard(),
+          ],
         ),
-        items: <Widget>[
-          Icon(Icons.play_arrow_outlined, size: 30,color: selsctedIconIndex == 0 ? white : black,),
-          Icon(Icons.search, size: 30,color: selsctedIconIndex == 1 ? white : black,),
-          Icon(Icons.home_outlined, size: 30,color: selsctedIconIndex == 2 ? white : black,),
-          Icon(Icons.favorite_border_outlined, size: 30,color: selsctedIconIndex == 3 ? white : black,),
-          Icon(Icons.person_outline, size: 30,color: selsctedIconIndex == 4 ? white : black,),
-        ],
-      ),
-    );
-  }
+      );
+
+      Widget buildTrainingImageCard() => Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Ink.image(
+              image: NetworkImage(
+                'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+              ),
+              colorFilter: ColorFilters.greyscale,
+              child: InkWell(
+                onTap: ()=> Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => VideoScreen(),
+                ),
+              ),
+              ),
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Text(
+              "Gym Training and Exercises",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ],
+        ),
+      );
+
+      Widget buildChallengesImageCard() => Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Ink.image(
+              image: NetworkImage(
+                'https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80',
+              ),
+              colorFilter: ColorFilters.greyscale,
+              child: InkWell(
+                onTap: () => Navigator.push(
+                context,
+                MaterialPageRoute(
+                  builder: (context) => YogaScreen(),
+                ),
+              ),
+              ),
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Text(
+              "Daily Yoga",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ],
+        ),
+      );
+
+      Widget buildCalculatorImageCard() => Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Ink.image(
+              image: NetworkImage(
+                'https://images.unsplash.com/photo-1553343801-5d4a45829f2a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fHdlaWdodHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+              ),
+              colorFilter: ColorFilters.greyscale,
+              child: InkWell(
+                onTap: () {},
+              ),
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Text(
+              "BMI Calculator",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ],
+        ),
+      );
+
+
+      Widget buildHealthyDietImageCard() => Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Ink.image(
+              image: NetworkImage(
+                'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhlYWx0aHklMjBkaWV0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+              ),
+              colorFilter: ColorFilters.greyscale,
+              child: InkWell(
+                onTap: () {},
+              ),
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Text(
+              "Healthy Diet",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ],
+        ),
+      );
+
+      Widget buildReminderImageCard() => Card(
+        clipBehavior: Clip.antiAlias,
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(24),
+        ),
+        child: Stack(
+          alignment: Alignment.center,
+          children: [
+            Ink.image(
+              image: NetworkImage(
+                'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
+              ),
+              colorFilter: ColorFilters.greyscale,
+              child: InkWell(
+                onTap: () {},
+              ),
+              height: 240,
+              fit: BoxFit.cover,
+            ),
+            Text(
+              "Reminder",
+              style: TextStyle(
+                fontWeight: FontWeight.bold,
+                color: Colors.white,
+                fontSize: 24,
+              ),
+            ),
+          ],
+        ),
+      );
 }
