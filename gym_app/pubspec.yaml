@@ -37,6 +37,7 @@ dependencies:
   introduction_screen: ^2.1.0
   #youtube_player: ^0.6.0
   youtube_player_flutter: ^8.0.0
+  flutter_icons: ^1.1.0
   #youtube_api: ^0.8.0
 
 dev_dependencies:

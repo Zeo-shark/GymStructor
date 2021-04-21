@@ -4,7 +4,7 @@ import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
 import 'package:gym_app/Screens/video_player/VideoScreen.dart';
-import 'package:gym_app/Screens/video_player/video_playing_screen.dart';
+import 'package:gym_app/Screens/video_player/excersises_screen.dart';
 import 'package:gym_app/constants/constants.dart';
 import 'package:gym_app/screens/home/home_screen.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
@@ -159,7 +159,7 @@ class LoginCredentials extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => Videoplayer(),
+                builder: (context) => VideoScreen(),
               ),
             ),
             child: Material(
