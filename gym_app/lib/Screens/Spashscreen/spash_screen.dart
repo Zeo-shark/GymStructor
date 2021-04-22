@@ -20,7 +20,7 @@ class _SpashScreen extends State<SpashScreen> {
 
   Widget _buildFullscrenImage() {
     return Image.asset(
-      'assets/3.jpeg',
+      'assets/splashscreen1.jfif',
       fit: BoxFit.cover,
       height: 800,
       width: 400,
@@ -28,7 +28,7 @@ class _SpashScreen extends State<SpashScreen> {
     );
   }
 
-  Widget _buildImage(String assetName, [double width = 350]) {
+  Widget _buildImage(String assetName, [double width = 500]) {
     return Image.asset('assets/$assetName', width: width);
   }
 
@@ -51,7 +51,7 @@ class _SpashScreen extends State<SpashScreen> {
         PageViewModel(
           title: "Welcome To Gym App ",
           body:
-          "Manage your fitness excersises at your home with your finger tips",
+          "Instructor for begineers to guide them with correct excersise and Warm-Up practise",
           image: _buildFullscrenImage(),
           decoration: pageDecoration.copyWith(
             contentMargin: const EdgeInsets.symmetric(horizontal: 16),
@@ -65,7 +65,7 @@ class _SpashScreen extends State<SpashScreen> {
           bodyWidget: Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: const [
-              Text("View and get tips for Yoga", style: bodyStyle),
+              Text("We will take care of everything, your routine, diets etc.", style: bodyStyle),
             ],
           ),
           decoration: pageDecoration.copyWith(
@@ -74,7 +74,7 @@ class _SpashScreen extends State<SpashScreen> {
             bodyAlignment: Alignment.bottomCenter,
             imageAlignment: Alignment.topCenter,
           ),
-          image: _buildImage('openpic.jpeg'),
+          image: _buildImage('assets/SplashScreen2.jfif'),
           reverse: true,
         ),
       ],
@@ -97,13 +97,13 @@ class _SpashScreen extends State<SpashScreen> {
         color: Color(0xFFBDBDBD),
         activeSize: Size(22.0, 10.0),
         activeShape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(25.0)),
+          borderRadius: BorderRadius.all(Radius.circular(50.0)),
         ),
       ),
       dotsContainerDecorator: const ShapeDecoration(
         color: Colors.black87,
         shape: RoundedRectangleBorder(
-          borderRadius: BorderRadius.all(Radius.circular(8.0)),
+          borderRadius: BorderRadius.all(Radius.circular(12.0)),
         ),
       ),
     );
