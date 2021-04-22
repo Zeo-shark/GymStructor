@@ -1,11 +1,29 @@
 import 'package:flutter/material.dart';
-import 'package:gym_app/Screens/video_player/yoga_screen.dart';
 import './components/color_filters.dart';
-import '../video_player/VideoScreen.dart';
 
+void main() => runApp(MyApp());
+
+class MyApp extends StatelessWidget {
+  MyApp({Key key}) : super(key: key);
+  static final String title = "Gym Trainer";
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      debugShowCheckedModeBanner: false,
+      title: title,
+      theme: ThemeData(primarySwatch: Colors.blue),
+      home: MainPage(title: title),
+    );
+  }
+}
 
 class MainPage extends StatefulWidget {
-  
+  final String title;
+
+  const MainPage({
+    @required this.title,
+  });
   @override
   _MainPageState createState() => _MainPageState();
 }
@@ -13,7 +31,9 @@ class MainPage extends StatefulWidget {
 class _MainPageState extends State<MainPage> {
   @override
   Widget build(BuildContext context) => Scaffold(
-        
+        appBar: AppBar(
+          title: Text(widget.title),
+        ),
         body: ListView(
           padding: EdgeInsets.all(16),
           children: [
@@ -31,28 +51,22 @@ class _MainPageState extends State<MainPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        elevation: 10,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Ink.image(
               image: NetworkImage(
-                'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
               ),
               colorFilter: ColorFilters.greyscale,
               child: InkWell(
-                onTap: ()=> Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => VideoScreen(),
-                ),
-              ),
+                onTap: () {},
               ),
               height: 240,
               fit: BoxFit.cover,
             ),
             Text(
-              "Gym Training and Warm Up Exercises",
+              "Training",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -68,29 +82,22 @@ class _MainPageState extends State<MainPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        elevation: 10,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Ink.image(
               image: NetworkImage(
-                'https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80',
+                'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
               ),
-              
               colorFilter: ColorFilters.greyscale,
               child: InkWell(
-                onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => YogaScreen(),
-                ),
-              ),
+                onTap: () {},
               ),
               height: 240,
               fit: BoxFit.cover,
             ),
             Text(
-              "Daily Yoga",
+              "Challenges",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -106,13 +113,12 @@ class _MainPageState extends State<MainPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        elevation: 10,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Ink.image(
               image: NetworkImage(
-                'https://images.unsplash.com/photo-1553343801-5d4a45829f2a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fHdlaWdodHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
               ),
               colorFilter: ColorFilters.greyscale,
               child: InkWell(
@@ -122,7 +128,7 @@ class _MainPageState extends State<MainPage> {
               fit: BoxFit.cover,
             ),
             Text(
-              "BMI Calculator",
+              "Calculator",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -139,13 +145,12 @@ class _MainPageState extends State<MainPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        elevation: 10,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Ink.image(
               image: NetworkImage(
-                'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhlYWx0aHklMjBkaWV0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
               ),
               colorFilter: ColorFilters.greyscale,
               child: InkWell(
@@ -171,13 +176,12 @@ class _MainPageState extends State<MainPage> {
         shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(24),
         ),
-        elevation: 10,
         child: Stack(
           alignment: Alignment.center,
           children: [
             Ink.image(
               image: NetworkImage(
-                'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdWx0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
+                'https://images.unsplash.com/photo-1514888286974-6c03e2ca1dba?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1327&q=80',
               ),
               colorFilter: ColorFilters.greyscale,
               child: InkWell(
@@ -187,7 +191,7 @@ class _MainPageState extends State<MainPage> {
               fit: BoxFit.cover,
             ),
             Text(
-              " Daily Reports",
+              "Reminder",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,

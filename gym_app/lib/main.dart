@@ -3,7 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:gym_app/Screens/login/login_screen.dart';
 
 import 'Screens/Spashscreen/spash_screen.dart';
-import 'Screens/login_screen.dart';
+
 
 Future<void> main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -20,6 +20,7 @@ class MyApp extends StatelessWidget {
       title: 'Gym App',
       theme: ThemeData(
         primarySwatch: Colors.blue,
+        
       ),
       home: SpashScreen(),
     );

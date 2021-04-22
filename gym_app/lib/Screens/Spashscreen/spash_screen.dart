@@ -2,7 +2,6 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:gym_app/Screens/login/login_screen.dart';
-import 'package:gym_app/Screens/login_screen.dart';
 import 'package:introduction_screen/introduction_screen.dart';
 
 class SpashScreen extends StatefulWidget {

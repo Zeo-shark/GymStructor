@@ -1,8 +1,10 @@
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gym_app/Screens/video_player/exercise_screen.dart';
+import 'package:gym_app/Screens/video_player/warmup_screen.dart';
 import 'package:gym_app/Screens/video_player/yoga_screen.dart';
 
-import 'excersises_screen.dart';
+import 'exercise_screen.dart';
 
 class VideoScreen extends StatefulWidget {
   @override
@@ -10,52 +12,89 @@ class VideoScreen extends StatefulWidget {
 }
 
 class _VideoScreen extends State<VideoScreen> {
-
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: Text("Video Section"),
+        title: Text("Training Section And Basic Warm Up"),
       ),
       body: Container(
-        color: Colors.cyanAccent,
+        color: Colors.grey,
         child: ListView(
-          scrollDirection: Axis.vertical,
-          padding: EdgeInsets.all(30),
+          padding: EdgeInsets.all(24),
           children: [
-            ListTile(
-              title: Text("exercises Videos"),
-              subtitle: Text("A collection of  videos for doing exercises at home "),
-              leading: Icon(Icons.play_arrow),
-              tileColor: Colors.lightBlueAccent,
-              selectedTileColor: Colors.green,
-              contentPadding: EdgeInsets.all(60),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => ExcersiseScreen(),
-                ),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(24),
+              ),
+              clipBehavior: Clip.antiAlias,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Ink.image(
+                    image: NetworkImage(
+                      'https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80',
+                    ),
+                    child: InkWell(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => WarmUpScreen(),
+                        ),
+                      ),
+                    ),
+                    height: 240,
+                    fit: BoxFit.cover,
+                  ),
+                  Text(
+                    "Gym Training Sessions",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
               ),
             ),
-            ListTile(
-              title: Text("Yoga videos"),
-              subtitle: Text("A collection of  yoga exercises videos "),
-              leading: Icon(Icons.play_arrow),
-              tileColor: Colors.lightBlueAccent,
-              selectedTileColor: Colors.green,
-              contentPadding: EdgeInsets.all(60),
-              onTap: () => Navigator.push(
-                context,
-                MaterialPageRoute(
-                  builder: (context) => YogaScreen(),
-                ),
+            SizedBox(height: 20),
+            Card(
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(24),
+              ),
+              clipBehavior: Clip.antiAlias,
+              child: Stack(
+                alignment: Alignment.center,
+                children: [
+                  Ink.image(
+                    image: NetworkImage(
+                      'https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80',
+                    ),
+                    child: InkWell(
+                      onTap: () => Navigator.push(
+                        context,
+                        MaterialPageRoute(
+                          builder: (context) => WarmUpScreen(),
+                        ),
+                      ),
+                    ),
+                    height: 240,
+                    fit: BoxFit.cover,
+                  ),
+                  Text(
+                    "Daily Warm-Up Sessions",
+                    style: TextStyle(
+                      fontWeight: FontWeight.bold,
+                      color: Colors.white,
+                      fontSize: 24,
+                    ),
+                  ),
+                ],
               ),
             ),
           ],
         ),
       ),
     );
-
   }
-
 }

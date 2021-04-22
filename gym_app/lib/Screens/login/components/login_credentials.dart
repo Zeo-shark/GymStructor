@@ -1,14 +1,11 @@
-import 'dart:convert';
 
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
 import 'package:fluttertoast/fluttertoast.dart';
-import 'package:gym_app/Screens/video_player/VideoScreen.dart';
-import 'package:gym_app/Screens/video_player/excersises_screen.dart';
-import 'package:gym_app/constants/constants.dart';
-import 'package:gym_app/screens/home/home_screen.dart';
 import 'package:rflutter_alert/rflutter_alert.dart';
-import 'package:crypto/crypto.dart';
+
+import 'package:gym_app/constants/constants.dart';
+import 'package:gym_app/Screens/home/home_screen.dart';
 
 
 // ignore: must_be_immutable
@@ -49,7 +46,7 @@ class LoginCredentials extends StatelessWidget {
                     vertical: appPadding * 0.75,
                     horizontal: appPadding),
                 fillColor: white,
-                hintText: 'Email',
+                hintText: 'Email Id',
                 suffixIcon: Icon(
                   Icons.email_outlined,
                   size: 25.0,
@@ -99,7 +96,7 @@ class LoginCredentials extends StatelessWidget {
                           controller: email,
                           decoration: InputDecoration(
                             icon: Icon(Icons.account_circle),
-                            labelText: 'Username',
+                            labelText: 'Email Id',
                           ),
                         ),
                         TextField(
@@ -159,7 +156,7 @@ class LoginCredentials extends StatelessWidget {
             onTap: () => Navigator.push(
               context,
               MaterialPageRoute(
-                builder: (context) => VideoScreen(),
+                builder: (context) => MainPage(),
               ),
             ),
             child: Material(
