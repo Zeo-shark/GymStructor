@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:gym_app/Screens/Healthy_Diet/healthy_diet.dart';
 import 'package:gym_app/Screens/bmi_calculator/bmi_screen.dart';
 import 'package:gym_app/Screens/video_player/yoga_screen.dart';
 import './components/color_filters.dart';
 import '../video_player/VideoScreen.dart';
-
 
 class MainPage extends StatefulWidget {
   
@@ -155,7 +155,12 @@ class _MainPageState extends State<MainPage> {
               ),
               colorFilter: ColorFilters.greyscale,
               child: InkWell(
-                onTap: () {},
+                onTap: () => Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                    builder: (context) => HealthyDiet(),
+                  ),
+                ),
               ),
               height: 240,
               fit: BoxFit.cover,
