@@ -17,7 +17,6 @@ class _SpashScreen extends State<SpashScreen> {
       ),
     );
   }
-
   Widget _buildFullscrenImage() {
     return Image.asset(
       'assets/logo.png',
@@ -79,7 +78,7 @@ class _SpashScreen extends State<SpashScreen> {
         ),
       ],
       onDone: () => _onIntroEnd(context),
-      //onSkip: () => _onIntroEnd(context), // You can override onSkip callback
+      onSkip: () => _onIntroEnd(context), // You can override onSkip callback
       showSkipButton: true,
       skipFlex: 0,
       nextFlex: 0,

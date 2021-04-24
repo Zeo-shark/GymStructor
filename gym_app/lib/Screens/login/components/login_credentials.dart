@@ -133,10 +133,6 @@ class LoginCredentials extends StatelessWidget {
                               textColor: Colors.white,
                               fontSize: 16.0
                           );
-
-
-
-
                           // Hashing Process
                         },
                         child: Text(
@@ -153,12 +149,30 @@ class LoginCredentials extends StatelessWidget {
             height: size.height * 0.04,
           ),
           InkWell(
-            onTap: () => Navigator.push(
-              context,
-              MaterialPageRoute(
-                builder: (context) => MainPage(),
-              ),
-            ),
+            onTap: () {
+              if(email.text=="user@gmail.com"&&password.text=="user123")
+                {
+                  Navigator.push(context, MaterialPageRoute(builder: (context) => MainPage()));
+                }
+              else
+                {
+                  Alert(
+                    context: context,
+                    type: AlertType.error,
+                    title: "Invalid Login Credentials ",
+                    buttons: [
+                      DialogButton(
+                        child: Text(
+                          "OK",
+                          style: TextStyle(color: Colors.black87, fontSize: 20),
+                        ),
+                        onPressed: () => Navigator.pop(context),
+                        width: 120,
+                      )
+                    ],
+                  ).show();
+                }
+              },
             child: Material(
                 elevation: 10.0,
                 shadowColor: primary,

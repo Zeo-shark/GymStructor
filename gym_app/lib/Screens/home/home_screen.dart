@@ -40,7 +40,6 @@ class _MainPageState extends State<MainPage> {
               image: NetworkImage(
                 'https://images.unsplash.com/photo-1534438327276-14e5300c3a48?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Mnx8Z3ltfGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
               ),
-              colorFilter: ColorFilters.greyscale,
               child: InkWell(
                 onTap: ()=> Navigator.push(
                 context,
@@ -53,7 +52,7 @@ class _MainPageState extends State<MainPage> {
               fit: BoxFit.cover,
             ),
             Text(
-              "Gym Training and Warm Up Exercises",
+              "Gym Training\nand Warm Up Exercises",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -77,8 +76,6 @@ class _MainPageState extends State<MainPage> {
               image: NetworkImage(
                 'https://images.unsplash.com/photo-1593810450967-f9c42742e326?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=1052&q=80',
               ),
-              
-              colorFilter: ColorFilters.greyscale,
               child: InkWell(
                 onTap: () => Navigator.push(
                 context,
@@ -115,7 +112,6 @@ class _MainPageState extends State<MainPage> {
               image: NetworkImage(
                 'https://images.unsplash.com/photo-1553343801-5d4a45829f2a?ixid=MnwxMjA3fDB8MHxzZWFyY2h8Njh8fHdlaWdodHxlbnwwfHwwfHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
               ),
-              colorFilter: ColorFilters.greyscale,
               child: InkWell(
                 onTap: () => Navigator.push(
                 context,
@@ -128,7 +124,7 @@ class _MainPageState extends State<MainPage> {
               fit: BoxFit.cover,
             ),
             Text(
-              "BMI Calculator",
+              "\nBMI Calculator",
               style: TextStyle(
                 fontWeight: FontWeight.bold,
                 color: Colors.white,
@@ -153,7 +149,6 @@ class _MainPageState extends State<MainPage> {
               image: NetworkImage(
                 'https://images.unsplash.com/photo-1498837167922-ddd27525d352?ixid=MnwxMjA3fDB8MHxzZWFyY2h8MTN8fGhlYWx0aHklMjBkaWV0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
               ),
-              colorFilter: ColorFilters.greyscale,
               child: InkWell(
                 onTap: () => Navigator.push(
                   context,
@@ -190,7 +185,6 @@ class _MainPageState extends State<MainPage> {
               image: NetworkImage(
                 'https://images.unsplash.com/photo-1563986768609-322da13575f3?ixid=MnwxMjA3fDB8MHxzZWFyY2h8NXx8cmVzdWx0fGVufDB8fDB8fA%3D%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60',
               ),
-              colorFilter: ColorFilters.greyscale,
               child: InkWell(
                 onTap: () {},
               ),

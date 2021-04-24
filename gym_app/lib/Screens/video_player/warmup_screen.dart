@@ -24,7 +24,7 @@ class _WarmUpScreen extends State<WarmUpScreen> {
              Card(
                child: YoutubePlayer(
                  controller:YoutubePlayerController(
-                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/2MoGxae-zyo"),
+                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/-p0PA9Zt8zk"),
                    flags: YoutubePlayerFlags(
                      enableCaption: false,
                      autoPlay: false,
@@ -35,7 +35,7 @@ class _WarmUpScreen extends State<WarmUpScreen> {
              Card(
                child: YoutubePlayer(
                  controller:YoutubePlayerController(
-                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/ml6cT4AZdqI"),
+                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/VecbXgWY0DI"),
                    flags: YoutubePlayerFlags(
                      enableCaption: false,
                      autoPlay: false,
@@ -46,7 +46,7 @@ class _WarmUpScreen extends State<WarmUpScreen> {
              Card(
                child: YoutubePlayer(
                  controller:YoutubePlayerController(
-                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/gC_L9qAHVJ8"),
+                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/_sNRH65Wmuw"),
                    flags: YoutubePlayerFlags(
                      enableCaption: false,
                      autoPlay: false,
@@ -57,7 +57,7 @@ class _WarmUpScreen extends State<WarmUpScreen> {
              Card(
                child: YoutubePlayer(
                  controller:YoutubePlayerController(
-                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/_W9B2ffnO5c"),
+                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/cHp3JjnhUTc"),
                    flags: YoutubePlayerFlags(
                      enableCaption: false,
                      autoPlay: false,
@@ -68,7 +68,7 @@ class _WarmUpScreen extends State<WarmUpScreen> {
              Card(
                child: YoutubePlayer(
                  controller:YoutubePlayerController(
-                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/5Om6M8elJtg"),
+                   initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/NQmnJtB1gzo"),
                    flags: YoutubePlayerFlags(
                      enableCaption: false,
                      autoPlay: false,
@@ -80,7 +80,7 @@ class _WarmUpScreen extends State<WarmUpScreen> {
              Card(
      child: YoutubePlayer(
     controller:YoutubePlayerController(
-    initialVideoId:YoutubePlayer.convertUrlToId(" https://youtu.be/lvlEj3VyqAg"),
+    initialVideoId:YoutubePlayer.convertUrlToId("https://youtu.be/t69IPkfC4vw"),
     flags: YoutubePlayerFlags(
     enableCaption: false,
     autoPlay: false,
