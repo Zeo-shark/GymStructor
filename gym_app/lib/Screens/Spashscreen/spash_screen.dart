@@ -20,9 +20,9 @@ class _SpashScreen extends State<SpashScreen> {
 
   Widget _buildFullscrenImage() {
     return Image.asset(
-      'assets/splashscreen1.jfif',
-      fit: BoxFit.cover,
-      height: 800,
+      'assets/logo.png',
+      fit: BoxFit.fitHeight,
+      height: 600,
       width: 400,
       alignment: Alignment.center,
     );
@@ -49,9 +49,9 @@ class _SpashScreen extends State<SpashScreen> {
       globalBackgroundColor: Colors.white,
       pages: [
         PageViewModel(
-          title: "Welcome To Gym App ",
+          title: "Welcome To Gymstructor",
           body:
-          "Instructor for begineers to guide them with correct excersise and Warm-Up practise",
+          "Instructor app for beginners to guide them with correct exercise and Warm-Up practise",
           image: _buildFullscrenImage(),
           decoration: pageDecoration.copyWith(
             contentMargin: const EdgeInsets.symmetric(horizontal: 16),
@@ -61,20 +61,20 @@ class _SpashScreen extends State<SpashScreen> {
           ),
         ),
         PageViewModel(
-          title: "Explore Gym App",
+          title: "Explore Gymstructor App",
           bodyWidget: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.spaceEvenly,
             children: const [
-              Text("We will take care of everything, your routine, diets etc.", style: bodyStyle),
+              Text("We will take care of everything\nyour routine,diets etc.", style: bodyStyle),
             ],
           ),
           decoration: pageDecoration.copyWith(
             bodyFlex: 2 ,
-            imageFlex: 5,
+            imageFlex: 3,
             bodyAlignment: Alignment.bottomCenter,
-            imageAlignment: Alignment.topCenter,
+            imageAlignment: Alignment.center,
           ),
-          image: _buildImage('assets/SplashScreen2.jfif'),
+          image: _buildImage('SplashScreen3.png'),
           reverse: true,
         ),
       ],

@@ -35,10 +35,8 @@ dependencies:
   crypto: ^3.0.1
   fluttertoast: ^7.1.8
   introduction_screen: ^2.1.0
-  #youtube_player: ^0.6.0
   youtube_player_flutter: ^8.0.0
   flutter_icons: ^1.1.0
-  #youtube_api: ^0.8.0
   font_awesome_flutter: ^9.0.0
 
 dev_dependencies:
@@ -67,6 +65,10 @@ flutter:
     - assets/q1.jpeg
     - assets/q2.jpeg
     - assets/c2.jpg
+    - assets/logo.png
+    - assets/SplashScreen1.png
+    - assets/SplashScreen2.png
+    - assets/SplashScreen3.png
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
