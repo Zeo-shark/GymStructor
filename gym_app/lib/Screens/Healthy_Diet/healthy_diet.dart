@@ -22,8 +22,8 @@ class _HealthyDiet extends State<HealthyDiet> {
     List<Widget> listItems = [];
     responseList.forEach((post) {
       listItems.add(Container(
-          height:100,
-          margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+          height:190,
+          margin: const EdgeInsets.symmetric(horizontal: 10, vertical: 10),
          decoration: BoxDecoration(borderRadius: BorderRadius.all(Radius.circular(20.0)), color: Colors.white, boxShadow: [
           BoxShadow(color: Colors.black.withAlpha(100), blurRadius: 10.0),
         ]),
@@ -31,7 +31,7 @@ class _HealthyDiet extends State<HealthyDiet> {
               padding: const EdgeInsets.symmetric(horizontal: 20.0, vertical: 8),
               child: Expanded(
                 child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceAround,
+                  mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                   children: <Widget>[
                     Column(
                       crossAxisAlignment: CrossAxisAlignment.start,
@@ -103,12 +103,16 @@ class _HealthyDiet extends State<HealthyDiet> {
     final double categoryHeight = size.height*0.30;
     return SafeArea(
       child: Scaffold(
-        backgroundColor: Colors.black87,
+        backgroundColor: Colors.tealAccent,
         appBar: AppBar(
+          title: Text("Healthy Diet Tips"),
           elevation: 0,
           backgroundColor: Colors.blueAccent,
-          leading: Icon(
-            Icons.menu,
+          leading: IconButton(
+            icon: Icon(Icons.arrow_back_ios_outlined),
+            onPressed: () {
+              Navigator.pop(context);
+              },
             color: Colors.black,
           ),
         ),
@@ -116,15 +120,6 @@ class _HealthyDiet extends State<HealthyDiet> {
           height: size.height,
           child: Column(
             children: <Widget>[
-              Row(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: <Widget>[
-                  Text(
-                    "Menu",
-                    style: TextStyle(color: Colors.white, fontWeight: FontWeight.bold, fontSize: 20),
-                  ),
-                ],
-              ),
               const SizedBox(
                 height: 10,
               ),
@@ -202,14 +197,25 @@ class CategoriesScroller extends StatelessWidget {
                       TextButton(
                         onPressed: (){
                           Alert(
-                            context: context,
-                            title: "Drink Water",
-                            desc: "Drink more water to avoid dehydration ",
-                            image: Image.asset("assets/c1.jpeg"),
-                          ).show();
+                              context: context,
+                              title: "Drink more Water to avoid dehydration",
+                              content: Column(
+                                children: <Widget>[
+                                  Image.asset("assets/c1.jpeg"),
+                                ],
+                              ),
+                              buttons: [
+                                DialogButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: Text(
+                                    "OK",
+                                    style: TextStyle(color: Colors.white, fontSize: 18),
+                                  ),
+                                )
+                              ]).show();
                         },
                        child:Text("Do You drink Enough water ?",
-                        style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+                        style: TextStyle(fontSize: 25, color: Colors.black87, fontWeight: FontWeight.bold),
                       ),
                       ),
                     ],
@@ -217,10 +223,10 @@ class CategoriesScroller extends StatelessWidget {
                 ),
               ),
               Container(
-                width: 150,
+                width: 180,
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
-                decoration: BoxDecoration(color: Colors.blue.shade400, borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                decoration: BoxDecoration(color: Colors.orange.shade400, borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Container(
                   child: Padding(
                     padding: const EdgeInsets.all(12.0),
@@ -249,7 +255,7 @@ class CategoriesScroller extends StatelessWidget {
                                 ]).show();
                           },
                           child:Text("Motivational Quotes for Fitness",
-                            style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+                            style: TextStyle(fontSize: 24, color: Colors.black87, fontWeight: FontWeight.bold),
                           ),
                         ),
                       ],
@@ -261,7 +267,7 @@ class CategoriesScroller extends StatelessWidget {
                 width: 150,
                 margin: EdgeInsets.only(right: 20),
                 height: categoryHeight,
-                decoration: BoxDecoration(color: Colors.lightBlueAccent.shade400, borderRadius: BorderRadius.all(Radius.circular(20.0))),
+                decoration: BoxDecoration(color:Colors.orange.shade400, borderRadius: BorderRadius.all(Radius.circular(20.0))),
                 child: Padding(
                   padding: const EdgeInsets.all(12.0),
                   child: Column(
@@ -270,14 +276,25 @@ class CategoriesScroller extends StatelessWidget {
                       TextButton(
                         onPressed: (){
                           Alert(
-                            context: context,
-                            title: "Follow the 7 days workout plan",
-                            desc: "And see results yourself",
-                            image: Image.asset("assets/c2.jpeg"),
-                          ).show();
+                              context: context,
+                              title: "Follow the 7 days workout plan and see results yourself",
+                              content: Column(
+                                children: <Widget>[
+                                  Image.asset("assets/c2.jpg",height: 400,),
+                                ],
+                              ),
+                              buttons: [
+                                DialogButton(
+                                  onPressed: () => Navigator.pop(context),
+                                  child: Text(
+                                    "OK",
+                                    style: TextStyle(color: Colors.white, fontSize: 18),
+                                  ),
+                                )
+                              ]).show();
                         },
                         child:Text("7 Days workout plan ",
-                          style: TextStyle(fontSize: 25, color: Colors.white, fontWeight: FontWeight.bold),
+                          style: TextStyle(fontSize: 25, color: Colors.black87, fontWeight: FontWeight.bold),
                         ),
                       ),
                     ],

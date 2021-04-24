@@ -63,6 +63,10 @@ flutter:
     - assets/h3.jpeg
     - assets/h4.jpeg
     - assets/h5.jpeg
+    - assets/c1.jpeg
+    - assets/q1.jpeg
+    - assets/q2.jpeg
+    - assets/c2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.
