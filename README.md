@@ -1,6 +1,6 @@
 ## ⭕⭕Message for contributors:
 Hello Developers👋,
-Have great interest in the domain of Android Development and looking for a project to work upon? You can start by contributing to FitKit app, a project to provide basic information regarding fitness, like shows excersise videos, shows yoga videos.
+Have great interest in the domain of Android Development and looking for a project to work upon? You can start by contributing to Gymstructor app, a project to provide basic information regarding fitness, like shows excersise videos, shows yoga videos.
 Provides BMI Calculator, necessary health diet tips and many more.
 
 ###Login Page details
